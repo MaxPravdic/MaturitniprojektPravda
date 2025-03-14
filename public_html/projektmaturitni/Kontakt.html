@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- Přidání nového písma -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav h1 {
+            color: rgb(222, 195, 50);
+            margin-left: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .contact-info {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+        .info-box {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #003366; /* Tmavě modré pozadí */
+            color: white; /* Bílý text */
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            font-family: 'Lora', serif; /* Použití nového fontu */
+        }
+        h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        h4 {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Pneusevis Kladno</h1>
+        <div>
+            <a href="strana.html">Hlavní strana</a>
+            <a href="rezervace.php">Rezervace termínu</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </div>
+    
+    <header>
+        <img src="header.jpg" alt="Kontakt Header" style="width:100%; max-height:200px; object-fit:cover;">
+    </header>
+    
+    <div class="container">
+        <h2>Kontaktujte nás</h2>
+        <div class="contact-info">
+            <p><strong>Adresa:</strong> U sevisu 69, 27201</p>
+            <p><strong>Telefon:</strong> +420 123 456 789</p>
+            <p><strong>Email:</strong> servis@kladno.cz</p>
+            <p><strong>Otevírací doba:</strong> Po - Pá: 8:00 - 17:00</p>
+        </div>
+    </div>
+
+    <!-- New Box with Features and Uses -->
+    <div class="info-box">
+        <h3>Popis maturitního projektu</h3>
+        <h4>1. Hlavní stránka</h4>
+        <ul>
+            <li><strong>Popis:</strong> Tato stránka je hlavním vstupním bodem pro všechny návštěvníky webu. Poskytuje základní informace o firmě, jejích službách a dalších stránkách webu. Stránka obsahuje navigační menu pro snadný přístup k jednotlivým sekcím.</li>
+            <li><strong>Výhody:</strong> Hlavní stránka slouží jako orientační bod, který zajišťuje návštěvníkům snadný přístup ke všem důležitým informacím. Navigace je intuitivní, což znamená, že každý návštěvník může rychle najít to, co hledá, bez zbytečných kroků.</li>
+            <li><strong>Kód:</strong> Používáme semantický HTML kód pro správné strukturování obsahu, což zajišťuje dobrou dostupnost a indexování ve vyhledávačích. K dispozici je jednoduché menu, které umožňuje přístup k dalším stránkám, jako je rezervace nebo kontakt.</li>
+        </ul>
+
+        <h4>2. Rezervace termínu</h4>
+        <ul>
+            <li><strong>Popis:</strong> Na této stránce si mohou uživatelé online zarezervovat termín pro výměnu pneumatik. Tento proces je velmi jednoduchý a uživatelé vyplní formulář s údaji o vozidle, výběru služby a dostupném termínu.</li>
+            <li><strong>Výhody:</strong> Výhodou této stránky je její automatizace. Uživatelé se nemusí telefonicky domlouvat na termínu, což šetří čas. Online systém umožňuje uživatelům vybrat si termín, který jim vyhovuje, a rezervace je potvrzena ihned po odeslání formuláře.</li>
+            <li><strong>Vlastnosti:</strong> Na stránce je implementován jednoduchý rezervační formulář, který obsahuje políčka pro zadání údajů o vozidle, preferovanou službu (např. přezutí pneumatik) a datum a čas termínu. Tento formulář je odesílán na server, kde jsou data automaticky zpracována.</li>
+            <li><strong>Význam kódu:</strong> Využíváme HTML formulář s metodou POST pro bezpečné odesílání dat. JavaScript je používán pro validaci formuláře na straně klienta a pro zobrazení upozornění po úspěšném odeslání.</li>
+        </ul>
+
+        <h4>3. Registrace / Přihlášení</h4>
+        <ul>
+            <li><strong>Popis:</strong> Tento formulář slouží pro registraci nových uživatelů a přihlášení těch stávajících. Registrace je nezbytná pro sledování a správu rezervací. Uživatelské účty poskytují přístup k historickým údajům o službách a termínech.</li>
+            <li><strong>Výhody:</strong> Uživatelé mohou spravovat své rezervace, upravovat osobní údaje a zajišťovat si nové termíny. Tento systém poskytuje bezpečný a šifrovaný přístup k jejich osobním údajům a předchozím objednávkám.</li>
+            <li><strong>Vlastnosti:</strong> Tento systém používá HTML formulář pro přihlášení a registraci. Hesla jsou šifrována a přenos dat mezi uživatelem a serverem je zabezpečen SSL šifrováním.</li>
+            <li><strong>Význam kódu:</strong> Kód obsahuje HTML pro formuláře a CSS pro stylování. JavaScript je použit pro zajištění bezpečnosti (např. kontrola silného hesla) a pro zobrazení chybových zpráv při nesprávném přihlášení nebo registraci.</li>
+        </ul>
+
+        <h4>4. Kontakt</h4>
+        <ul>
+            <li><strong>Popis:</strong> Tato stránka poskytuje veškeré kontaktní údaje pro návštěvníky, kteří si přejí kontaktovat firmu. Zobrazuje adresu, telefonní číslo, e-mail a otevírací dobu. Může také obsahovat formulář pro zaslání zprávy přímo ze stránky.</li>
+            <li><strong>Výhody:</strong> Poskytuje všechny potřebné informace na jednom místě. Návštěvníci mohou snadno kontaktovat firmu jak telefonicky, tak e-mailem nebo přes kontaktní formulář.</li>
+            <li><strong>Vlastnosti:</strong> Stránka používá jednoduchý HTML formulář pro odesílání zpráv. Obsahuje také Google Mapu pro lepší vizualizaci lokace firmy.</li>
+            <li><strong>Význam kódu:</strong> Používá se základní HTML kód pro zobrazení kontaktních údajů, formulář a mapu. Pro validaci a odesílání formuláře je použit PHP kód na serveru.</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace Vozidla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav h1 {
+            color: rgb(222, 195, 50);
+            margin-left: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        label {
+            width: 30%;
+            text-align: left;
+        }
+        input, select {
+            width: 65%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function showPopup(event) {
+            event.preventDefault();
+            alert("🎉Úspěšně odesláno, váš termín čeká na potvrzení🎉");
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <h1>Pneusevis Kladno</h1>
+        <div>
+            <a href="strana.html">Hlavní strana</a>
+            <a href="rezervace.php">Rezervace termínu</a>
+            <a href="Kontakt.html">Kontakt</a>
+        </div>
+    </div>
+    
+    <header>
+        <img src="header.jpg" alt="Header" style="width:100%; max-height:300px; object-fit:cover;">
+    </header>
+    
+    <div class="gallery">
+        <img src="image1.jpg" alt="Obrázek 1">
+        <img src="image2.jpg" alt="Obrázek 2">
+        <img src="image3.jpg" alt="Obrázek 3">
+        <img src="image4.jpg" alt="Obrázek 4">
+    </div>
+    
+    <div class="text-box">
+        <p>Objednejte se v online rezervačním kalendáři, nebo si zavolejte pro express termín na 123456789<br>Pneu zakoupené jinde nepřezouváme</p>
+    </div>
+    
+</body>
+</html>
