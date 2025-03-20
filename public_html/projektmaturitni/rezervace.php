@@ -155,7 +155,7 @@ $conn->close();
         <div>
             <a href="strana.html">Hlavní strana</a>
             <a href="rezervace.php">Rezervace termínu</a>
-            <a href="kontakt.html">Kontakt</a>
+            <a href="Kontakt.html">Kontakt</a>
         </div>
     </div>
 

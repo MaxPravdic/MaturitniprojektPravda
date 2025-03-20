@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["spz"])) {
 
 //  Načtení návštěv pouze pro přihlášeného uživatele
 $navstevy = [];
-$sql = "SELECT spz, barva, model, datum_navstevy FROM 1auta WHERE username = ? ORDER BY datum_navstevy DESC";
+$sql = "SELECT spz, barva, model, datum_navstevy, potvrzeno FROM 1auta WHERE username = ? ORDER BY datum_navstevy DESC";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $logged_user);
 $stmt->execute();
@@ -122,27 +122,31 @@ $conn->close();
     </div>
 
     <div class="container">
-        <h2>Vaše návštěvy</h2>
-        <?php if (count($navstevy) > 0): ?>
-            <table>
+    <h2>Vaše návštěvy</h2>
+    <?php if (count($navstevy) > 0): ?>
+        <table>
+            <tr>
+                <th>SPZ</th>
+                <th>Barva</th>
+                <th>Model</th>
+                <th>Datum návštěvy</th>
+                <th>Stav</th> <!-- Nový sloupec pro fajfku -->
+            </tr>
+            <?php foreach ($navstevy as $navsteva): ?>
                 <tr>
-                    <th>SPZ</th>
-                    <th>Barva</th>
-                    <th>Model</th>
-                    <th>Datum návštěvy</th>
+                    <td><?php echo htmlspecialchars($navsteva["spz"]); ?></td>
+                    <td><?php echo htmlspecialchars($navsteva["barva"]); ?></td>
+                    <td><?php echo htmlspecialchars($navsteva["model"]); ?></td>
+                    <td><?php echo htmlspecialchars($navsteva["datum_navstevy"]); ?></td>
+                    <td style="text-align: center;">
+                        <?php echo $navsteva["potvrzeno"] ? '✅' : '❌'; ?>
+                    </td>
                 </tr>
-                <?php foreach ($navstevy as $navsteva): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($navsteva["spz"]); ?></td>
-                        <td><?php echo htmlspecialchars($navsteva["barva"]); ?></td>
-                        <td><?php echo htmlspecialchars($navsteva["model"]); ?></td>
-                        <td><?php echo htmlspecialchars($navsteva["datum_navstevy"]); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-        <?php else: ?>
-            <p>Zatím nemáte žádné návštěvy.</p>
-        <?php endif; ?>
-    </div>
+            <?php endforeach; ?>
+        </table>
+    <?php else: ?>
+        <p>Zatím nemáte žádné návštěvy.</p>
+    <?php endif; ?>
+</div>
 </body>
 </html>
