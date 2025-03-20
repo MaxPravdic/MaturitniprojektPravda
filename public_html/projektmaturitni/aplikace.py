@@ -55,7 +55,7 @@ def cancel_visit():
     db.close()
 
     if cursor.rowcount > 0:
-        messagebox.showinfo("Zrušení", f"Návštěvy na {date} byly zrušeny.")
+        messagebox.showinfo("Zrušení", f"Návštěvy na {date} byly odstraněny.")
         result_label.config(text="")
     else:
         messagebox.showwarning("Chyba", "Žádná návštěva nebyla nalezena.")
@@ -83,16 +83,7 @@ root.title("Správa návštěv")
 root.geometry("500x500")  
 root.configure(bg="#2E2E2E")
 
-# Načtení loga
-logo_path = os.path.abspath("logo.png")
-if os.path.exists(logo_path):
-    global logo_img
-    logo_img = PhotoImage(file=logo_path)
-    resized_logo = logo_img.subsample(3, 3)
-    logo_label = tk.Label(root, image=resized_logo, bg="#2E2E2E")
-    logo_label.pack(pady=(10, 5))
-else:
-    print(f"Chyba: Logo nebylo nalezeno na {logo_path}")
+
 
 # Nadpis (pod logem)
 tk.Label(root, text="Vyhledávání návštěv podle data", font=("Arial", 16, "bold"), bg="#1C1C1C", fg="white", pady=10).pack(fill="x")
@@ -104,7 +95,7 @@ entry.pack(pady=5)
 
 # Tlačítka
 tk.Button(root, text="Vyhledat návštěvu", font=("Arial", 12), command=check_date, bg="#555555", fg="white").pack(pady=5)
-tk.Button(root, text="Zrušit návštěvu", font=("Arial", 12), command=cancel_visit, bg="#AA4444", fg="white").pack(pady=5)
+tk.Button(root, text="Odstranit návštěvu", font=("Arial", 12), command=cancel_visit, bg="#AA4444", fg="white").pack(pady=5)
 tk.Button(root, text="Potvrdit objednávku", font=("Arial", 12), command=confirm_visit, bg="#4CAF50", fg="white").pack(pady=5)
 tk.Button(root, text="Zobrazit nadcházející návštěvy", font=("Arial", 12), command=show_upcoming_visits, bg="#444444", fg="white").pack(pady=5)
 
